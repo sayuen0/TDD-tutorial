@@ -17,7 +17,7 @@ class Money implements Expression {
         return amount == money.amount && money.currency().equals(this.currency);
     }
 
-    Money times(int multiplier) {
+    Expression times(int multiplier) {
         return new Money(amount * multiplier, currency);
     }
 
@@ -33,12 +33,20 @@ class Money implements Expression {
         return this.currency;
     }
 
-    Expression plus(Money addend) {
+    public Expression plus(Expression addend) {
         return new Sum(this, addend);
     }
 
     public Money reduce(Bank bank, String to) {
         int rate = bank.rate(this.currency, to);
         return new Money(this.amount / rate, to);
+    }
+
+    @Override
+    public String toString() {
+        return "Money{" +
+                "amount=" + amount +
+                ", currency='" + currency + '\'' +
+                '}';
     }
 }
