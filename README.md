@@ -11,6 +11,6 @@
 - [x] ~~DollarとFrancの重複~~
 - [x] ~~equals()の一般化~~
 - [x] ~~FrancとDollarの比較~~
-- [ ] times() の一般化
+- [x] ~~times() の一般化~~
 - [x] ~~通貨の概念~~
 - [ ] testFrancMultiplicatioを削除する?
