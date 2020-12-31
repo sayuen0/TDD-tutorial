@@ -3,3 +3,4 @@
 - [ ] amountをprivateにする
 - [x] ~~Dollarの副作用をどうするか~~
 - [ ] Moneyの丸め処理どうする?
+- [x] ~~equals()~~
