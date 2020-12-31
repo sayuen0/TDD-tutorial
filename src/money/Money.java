@@ -17,7 +17,7 @@ class Money implements Expression {
         return amount == money.amount && money.currency().equals(this.currency);
     }
 
-    Expression times(int multiplier) {
+    public Expression times(int multiplier) {
         return new Money(amount * multiplier, currency);
     }
 
